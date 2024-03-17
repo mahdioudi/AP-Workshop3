@@ -6,4 +6,12 @@ public class PhoneNumber {
         this.countryCode = countryCode;
         this.number = number;
     }
+
+
+    public String toString() {
+        return "PhoneNumber{" +
+                "countryCode='" + countryCode + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }

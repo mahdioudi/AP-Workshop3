@@ -5,4 +5,6 @@ public class Contact {
     private String lastname;
 
 
+    PhoneNumber phoneNumber = new PhoneNumber();
+    Address address = new Address();
 }

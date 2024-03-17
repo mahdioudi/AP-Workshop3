@@ -3,10 +3,26 @@ public class Address {
     private String country;
     private String city;
 
-    public Address(String zipcode , String country , String city){
+
+    public String toString() {
+        return "Address{" +
+                "zipcode='" + zipcode + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
+
+    public String Address(String zipcode , String country , String city){
         this.city = city;
         this.country = country;
         this.zipcode = zipcode;
+
+
+
+
+
+
+
 
     }
 }

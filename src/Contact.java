@@ -5,7 +5,8 @@ public class Contact {
     private String lastname;
 
 
-    PhoneNumber phoneNumber = new PhoneNumber("+98" , "9121234567");
+    PhoneNumber phoneNumber = new PhoneNumber();
+    Address address = new Address();
 
     public String getGroup() {
         return group;
@@ -54,6 +55,16 @@ public class Contact {
     public void setAddress(Address address) {
         this.address = address;
     }
+    @Override
+    public String toString() {
+        return "Contact {\n" +
+                "  group: " + group + "\n" +
+                "  email: " + email + "\n" +
+                "  firstName: " + firstname + "\n" +
+                "  lastName: " + lastname + "\n" +
+                "  phoneNumber: (+" + phoneNumber.getCountryCode() + ") " + phoneNumber.getNumber() + "\n" +
+                "  address: " + address.getZipcode() + " - " + address.getCountry() + " - " + address.getCity() + "\n" +
+                "}";
+    }
 
-    Address address = new Address("985546" ,"iran" , "tehran" );
 }

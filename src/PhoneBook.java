@@ -2,20 +2,22 @@ import java.util.ArrayList;
 
     public class PhoneBook {
         private ArrayList<Contact> contacts;
+        private Contact contact;
 
         public PhoneBook() {
             this.contacts = new ArrayList<>();
         }
 
-        public boolean addContact(Contact contact) {
+        public boolean addContact(Contact newContact) {
             for (Contact existingContact : contacts) {
-                if (existingContact.equals(contact)) {
+                if (existingContact.equals(newContact)) {
                     return false;
                 }
             }
-            contacts.add(contact);
+            contacts.add(newContact);
             return true;
         }
+
         public boolean deleteContact(String firstName, String lastName) {
             for (int i = 0; i < contacts.size(); i++) {
                 Contact contact = contacts.get(i);
@@ -65,4 +67,6 @@ import java.util.ArrayList;
         public void setContacts(ArrayList<Contact> contacts) {
             this.contacts = contacts;
         }
+
+
     }
